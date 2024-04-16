@@ -1,0 +1,108 @@
+$dark: #333;
+$light: #fafafb;
+$red: #922;
+$green: #292;
+$blue: #229;
+$yellow: #c92;
+$orange: #c65;
+$greenBlue: #299;
+$background: #BECAC5;
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background: $background;
+  font-family: Helvetica, sans-serif;
+}
+.blob {
+  display: inline-block;
+  width: 23rem;
+  height: 20rem;
+}
+.anim {
+  //display: inline-block;
+  border-radius: 50%;
+  border: .4rem solid $light;
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  left: 9.5rem;
+  top: 3rem;
+  
+  &.head {
+    border-color: $greenBlue;
+  }
+  &.body {
+    border-color: $yellow;
+    width: 6rem;
+    height: 6rem;
+    top: 8rem;
+    left: 8.5rem;
+  }
+  &.hand {
+    border-color: $red;
+    top: 8rem;
+    left: 15rem;
+    
+    &.left {
+      //border-color: $green;
+      left: 4rem;
+    }
+  }
+  &.foot {
+    border-color: $orange;
+    top: 15rem;
+    left: 7rem;
+    
+    &.right {
+      //border-color: $blue;
+      left: 12rem;
+    }
+  }
+}
+
+.controls {
+  display: inline-block;
+  width: 23rem;
+  padding-top: 1rem;
+  div {
+    border: 0 solid $dark;
+    overflow: auto;
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+    margin-left: .5rem;
+    font-size: .8rem;
+  }
+  
+  input[type="range"] {
+    width: 16rem;
+    display: inline-block;
+    margin: .5rem;
+    float: right;
+  }
+  button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    background: transparent;
+    border: none;
+    color: $dark;
+    line-height: 1;
+    margin: .5rem;
+    text-align: center;
+    padding: .2rem .5rem .2rem .3rem;
+    border-radius: .3rem;
+    transition: background .15s linear, color .15s linear;
+    border: 1px solid $dark;
+    float: left;
+    
+    &.active {
+      background: $dark;
+      color: $light;
+    }
+  }
+}
